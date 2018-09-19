@@ -1,0 +1,14 @@
+@media (max-width: 600px)
+{
+	.cart{
+width:378% !important;
+max-width:380% !important;
+}
+}
+@media (min-width:650px) and (max-width: 900px)
+{
+	.cart{
+width:165% !important;
+max-width:170% !important;
+	}
+}

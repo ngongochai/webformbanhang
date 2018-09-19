@@ -1,0 +1,80 @@
+﻿@model IList<haymuasi.Models.Product>
+       @{
+           long total = 0;
+           long giasp = 1;
+       }
+
+<h2 style="font-family:webfont;">Đặt Hàng Thành Công</h2>
+<h3 style="font-family:webfont;">Cảm ơn bạn đã lựa chọn sản phẩm của chúng tôi</h3>
+<h4 style="font-family:webfont;">Chi Tiết Đơn Hàng của bạn</h4>
+<div class="container">
+    <div class="col-md-8">
+        <table class="tbl-cart" style="font-size: 15px;">
+            <thead>
+                <tr>
+                    <td width="60px"></td>
+                    <td width="400px">Sản phẩm</td>
+                    <td width="90px">Số lượng</td>
+                    <td width="160px">Giá tiền</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="odd">
+                        <td><img src="~/Content/img/@item.hinhanh" style="width:60px;"></td>
+                        <td style="text-align: center">
+                            <span class="namemb">@item.chitiet</span>
+                            <br><span style="color:#ff4200;"><span class="parammb">size: </span>@item.size</span>
+                            <br><span style="color:#ff4200;">Mã sp: @item.masp</span>
+                        </td>
+                        <td><input type="text" class="input-style change_quantity_input" value="@item.quantity"> </td>
+                        <td>@item.total.ToString("N0") Đ</td>
+                    </tr>
+                    <tr></tr>
+                    if (@item.giasp ==0)
+                    {
+                        giasp = 0;
+                    }
+                    total = total + @item.total;
+                }
+            </tbody>
+            <tfoot style="border-bottom: none;">
+                <tr class="first">
+                    <td colspan="3">Hỗ trợ đặt hàng<br> <span style="color: #0e6adc;font-size: 20px;">0163.622.8289</span></td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="2">@if(giasp==0){<span style="float:left;color:red;">Lưu Ý:Mặt Hàng Không Có Giá Tiền Bạn Sẽ Nhận Được</span><span>Tiền hàng</span>}
+                                                  else
+                                                  {<span>Tiền hàng</span>}</td>
+                    <td colspan="2"><p class="money-style">@total.ToString("N0") Đ</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">@if(giasp==0){<span style="float:left;color:red;">Cuộc Gọi Báo Giá Tiền Của Chúng Tôi</span><span> Phí vận chuyển</span>}else{<span> Phí vận chuyển</span>}</td>
+                    <td colspan="2"> + <span id="fee-transport">0 đ</span><span style="font-size: 13px;"> (Tạm tính)</span> </td>
+                </tr>
+                <tr id="trvoucher"></tr>
+                <tr><td colspan="4"><span class="hr-total"></span></td></tr>
+                <tr>
+                    <td align="right" colspan="2"><span>Tổng tiền đơn hàng</span></td>
+                    <td colspan="2"><p id="total-money">@total.ToString("N0") Đ</p></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="col-md-4" style="font-family:webfont;">
+        <h2 style="font-family:webfont;">Bạn sẽ nhận được điện thoại xác nhận sớm nhất</h2>
+        <h3 style="font-family:webfont;">Thông Tin đặt hàng của bạn</h3>
+        <h4 style="font-family:webfont;"><span>Họ Và Tên : </span><strong id="hovaten"></strong></h4>
+        <h4 style="font-family:webfont;"><span>Điện Thoại : </span><strong id="dienthoai"></strong></h4>
+        <h4 style="font-family:webfont;"><span>Địa Chỉ : </span><strong id="diachi"></strong></h4>
+        <h4 style="font-family:webfont;"><span>Tỉnh/Thành Phố: </span><strong id="tinhthanhpho"></strong></h4>
+        <h4 style="font-family:webfont;"><span>Email : </span><strong id="mail"></strong></h4>
+    </div>
+    <div class="col-md-6"></div><button style="margin-right:30px;" id="buymore" onclick="home()" class="btn btn-primary">Quay lại trang chủ</button>
+</div>
+<script>
+    function home() {
+        window.location = "/";
+    }
+</script>

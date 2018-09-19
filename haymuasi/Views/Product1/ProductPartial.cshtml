@@ -1,0 +1,56 @@
+﻿@model IEnumerable<haymuasi.Models.Product>
+@{
+    ViewBag.Title = "Product";
+}
+    <div class="row">
+        @foreach (var i in Model)
+        {
+		var url = "/ga-chong-tham/" + i.masp + "-" + i.productid;
+            <div class="col-md-4 col-xs-12 col-sm-8 productid" id="@i.productid">
+                <div class="product-detail">
+                    <div class="hinhanhsp">
+                        <a href="@url">
+                            <img class="img-responsive" src="@Url.Content("~/Content/img/" + @i.hinhanh)" alt="ga chong tham cao cap" title="ga chong tham cao cap" />
+                        </a>
+                        <span class="msp-hinhanh">Mã SP:@i.masp</span>
+                        <span class="size">Kích thước:@i.size</span>
+                    </div>
+                    <div class="tensp">
+                        <div class="ten-sanpham">
+							<span><a href="@url">@i.chitiet</a></span>
+                        </div>
+                        <div class="chitiet-sp">
+                            <div class="col-md-5 col-xs-6 col-sm-4 gia-sp ">
+                                @if (i.giasp == 0)
+                                {
+                                    <span style="font-size:13px;">Giá:Chưa Xác định</span>
+                                }
+                                else
+                                {
+                                    <span>@string.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:#,###}", @i.giasp)</span>
+                                }
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-2 luotxem-sp">
+                                <span>@i.luotxem</span>
+                            </div>
+                            <div class="col-md-4 col-xs-4 muangay" onclick="selectquantity(@i.productid)">
+                                <div id="show-select" style="position:relative">
+                                    <img style=" width: 100%;" src="~/Content/img/btn-buyer.png" />
+                                </div>
+                            </div>
+                            @if (i.giasp == 0)
+                            {
+                                <div class="select-quantity" id="selectquantity_@i.productid"></div>
+                                <div id="showinput_@i.productid" style="display:none;"><input type="text" id="postsize_@i.productid" class="inputsize form-control" placeholder="Nhập Kích thước" /></div>
+                            }
+                            else
+                            {
+                                <div class="select-quantity" id="selectquantity_@i.productid"></div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+

@@ -1,0 +1,120 @@
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Mvc.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.Mvc.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\Product.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Helpers.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Mvc.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Razor.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\Product.pdb
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.Mvc.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Razor.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Helpers.xml
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\obj\Debug\haymuasi.csprojResolveAssemblyReference.cache
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\obj\Debug\haymuasi.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\obj\Debug\haymuasi.pdb
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\haymuasi.dll.config
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\haymuasi.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\haymuasi.pdb
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Mvc.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.Mvc.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\Product.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Helpers.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Mvc.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Razor.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\Product.pdb
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\PagedList.Mvc.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Razor.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\System.Web.Helpers.xml
+D:\ASP.NET\haymuasi_v2\haymuasi\obj\Debug\haymuasi.csprojResolveAssemblyReference.cache
+D:\ASP.NET\haymuasi_v2\haymuasi\obj\Debug\haymuasi.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\obj\Debug\haymuasi.pdb
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\haymuasi.dll.config
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\haymuasi.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\haymuasi.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\haymuasi.dll.config
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\haymuasi.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\haymuasi.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.Mvc.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Product.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Helpers.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Mvc.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Razor.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Product.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.Mvc.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Razor.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Helpers.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Mvc.xml
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\obj\Debug\haymuasi.csprojResolveAssemblyReference.cache
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\obj\Debug\haymuasi.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\obj\Debug\haymuasi.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\haymuasi.dll.config
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\haymuasi.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\haymuasi.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\PagedList.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\PagedList.Mvc.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\Product.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Helpers.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Mvc.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Razor.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Webpages.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\Product.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\PagedList.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\PagedList.Mvc.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Razor.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Webpages.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Helpers.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\System.Web.Mvc.xml
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\obj\Debug\haymuasi.csprojResolveAssemblyReference.cache
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\obj\Debug\haymuasi.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\obj\Debug\haymuasi.pdb
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\haymuasi.dll.config
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\haymuasi.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\haymuasi.pdb
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.Mvc.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Product.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Helpers.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Mvc.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Razor.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Product.pdb
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\PagedList.Mvc.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Razor.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Deployment.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Webpages.Razor.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Helpers.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\System.Web.Mvc.xml
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\obj\Debug\haymuasi.csprojResolveAssemblyReference.cache
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\obj\Debug\haymuasi.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\obj\Debug\haymuasi.pdb

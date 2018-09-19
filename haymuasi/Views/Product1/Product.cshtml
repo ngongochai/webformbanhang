@@ -1,0 +1,17 @@
+﻿@model IList<haymuasi.Models.Product>
+@{
+    ViewBag.Title = "Product";
+}
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="title-content">
+                <span>@item.categoryid</span>
+            </div>
+        </div>
+        @Html.Partial("ProductPartial", item.product);
+    }
+</div>
+
+

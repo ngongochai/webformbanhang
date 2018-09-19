@@ -1,0 +1,20 @@
+﻿@model IList<haymuasi.Models.MenuHeader>
+@{
+    ViewBag.Title = "MenuHeader";
+}
+<div class="navbar top_nav custom-navbar">
+    <div class="container cart" style="background: wheat;">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav custom-collapse-top">
+                @foreach (var i in Model)
+                {
+                    <li>
+                        <a href="#ga-chong-tham-cao-cap" title="ga chống thấm">@i.Menu</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+

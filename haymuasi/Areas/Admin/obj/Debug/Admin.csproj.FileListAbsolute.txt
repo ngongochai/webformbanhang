@@ -1,0 +1,35 @@
+C:\Users\NGOC HAI\Desktop\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.dll
+C:\Users\NGOC HAI\Desktop\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.pdb
+C:\Users\NGOC HAI\Desktop\haymuasi_v2\haymuasi\bin\Admin.dll.config
+C:\Users\NGOC HAI\Desktop\haymuasi_v2\haymuasi\bin\Admin.dll
+C:\Users\NGOC HAI\Desktop\haymuasi_v2\haymuasi\bin\Admin.pdb
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.csprojResolveAssemblyReference.cache
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.pdb
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\Admin.dll.config
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\Admin.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\haymuasi\bin\Admin.pdb
+D:\ASP.NET\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.csprojResolveAssemblyReference.cache
+D:\ASP.NET\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.pdb
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\Admin.dll.config
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\Admin.dll
+D:\ASP.NET\haymuasi_v2\haymuasi\bin\Admin.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Admin.dll.config
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Admin.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Admin.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.csprojResolveAssemblyReference.cache
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\Admin.dll.config
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\Admin.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\bin\Admin.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.csprojResolveAssemblyReference.cache
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.pdb
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Admin.dll.config
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Admin.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\bin\Admin.pdb
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.csprojResolveAssemblyReference.cache
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\haymuasi\Areas\Admin\obj\Debug\Admin.pdb

@@ -1,0 +1,11 @@
+﻿@model IList<haymuasi.Models.ProductTopic>
+@{
+    ViewBag.Title = "ProductTopic";
+}
+@{
+    var count = 0;
+}
+@foreach (var i in Model)
+{
+    <li>@i.topic</li>
+}

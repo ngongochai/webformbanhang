@@ -1,0 +1,96 @@
+﻿@model IList<haymuasi.Models.Product>
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    long total = 0;
+    int count = 0;
+	int giasp=1;
+}
+@Html.Action("MenuHeader", "Home")
+<style>
+    thead tr td{
+        padding:0 !important;
+    }
+	#form-infor input{
+	max-width:100% !important;
+	}
+</style>
+<link href="~/Content/order.css" rel="stylesheet" type="text/css" />
+<div class="container" id="inforcustomer">
+    <div class="col-md-8">
+        <table class="table cart">
+            <thead style="padding:0;">
+                <tr style="padding:0;">
+                    <td class="title-cart" style="font-size:15px;">Mã sản phẩm</td>
+                    <td class="title-cart" style="font-size:15px;">Tên sản phẩm</td>
+                    <td class="title-cart" style="font-size:15px;">Kích thước</td>
+                    <td class="title-cart" style="font-size:15px;">Hình ảnh</td>
+                    <td class="title-cart" style="font-size:15px;">Đơn giá</td>
+                    <td class="title-cart" style="font-size:15px;">Số Lượng</td>
+                    <td class="title-cart" style="font-size:15px;">Thành tiền</td>
+                    <td class="title-cart" style="font-size:15px;"></td>
+                </tr>
+            </thead>
+            <tbody style="padding:0;">
+                @foreach (var item in Model)
+                {
+				    if (@item.giasp ==0)
+                    {
+                        giasp = 0;
+                    }
+                    <tr id="item_@count">
+                        <td class="style" style="font-size:15px;">@item.masp</td>
+                        <td class="style" style="font-size:15px;">@item.chitiet</td>
+                        <td class="style"><span style="font-size:15px;" id="sizeeidt_@count">@item.size</span></td>
+                        <td class="style"><img src="~/Content/img/@item.hinhanh" style="width:100px;" /></td>
+                        @if (item.giasp == 0)
+                        {
+                            <td class="style" style="font-size:15px;">0</td>
+                        }
+                        else
+                        {
+                            <td class="style" style="font-size:15px;">@string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0:#,###}", @item.giasp)</td>
+                        }
+                        <td class="style" style="font-size:15px;">
+                            <select id="selectquantity_@item.productid" name="@item.productid" onchange="changequantity(@item.productid, $(this).val(),'@item.size');">
+                                @for (int i = 1; i <= 50; i++)
+                                {
+                                    if (@item.quantity == @i)
+                                    {
+                                        <option value="@i" selected>@i</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                }
+                            </select>
+                        </td>
+                        <td style="font-size:15px;" class="style total1_@item.productid">@string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0:#,###}", @item.total)</td>
+                        <td style="cursor:pointer" class="style" onclick="deleteitem(@item.productid,$('#selectquantity_@item.productid').val(),$('#sizeeidt_@count').text(),@count)">Xóa</td>
+                    </tr>
+                                total = total + item.total;
+                                count++;
+                }
+            </tbody>
+        </table>
+<div class="row cart">
+            <div class="col-xs-7"> </div>
+            <div class="col-xs-5"  style="color:red;font-size:20px;font-weight:bold;"><span>TỔNG TIỀN :</span><span  id="total2">
+   @string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0:#,###}", @total) VND</span>
+            </div>
+</div>
+        <button style="font-size:20px;line-height:10px;" class="btn btn-primary form-control" id="backcart">Quay Lại Giỏ Hàng</button>
+@if(giasp==0){<span style="float:left;color:red;font-size:20px;">Lưu Ý:Mặt Hàng Không Có Giá Tiền Bạn Sẽ Nhận Được Cuộc Gọi Báo Giá Tiền Của Chúng Tôi</span>}
+    </div>
+        <div class="col-md-4 col-sm-12 col-xs-12" id="form-infor">
+            <strong style="font-size:25px;color:red;">Thông Tin Khách Hàng</strong>
+            <div><strong>Họ Và Tên(*)</strong><input id="namecustomer" class="form-control" placeholder="Nhập Họ Và Tên" /></div>
+            <div><strong>Số Điện Thoại(*)</strong><input id="phone" class="form-control" type="number" placeholder="Nhập Số điện thoại" /></div>
+            <div><strong>Địa Chỉ(*)</strong><input id="address" class="form-control" placeholder="Số nhà, xã/phường, quận/huyện" /></div>
+            <div><strong>Tỉnh/Thành Phố(*)</strong><input id="city" class="form-control" placeholder="Tên Tỉnh/Tên Thành phố" /></div>
+            <div><strong>Địa chỉ Email</strong><input type="email" id="email" class="form-control" placeholder="Không bắt buộc" /></div>
+            <button style="margin-top:10px;width:100%;" id="postorder" class="btn btn-success">Đặt Hàng</button>
+        </div>
+</div>
+

@@ -1,0 +1,138 @@
+﻿@using haymuasi.Models
+@using PagedList.Mvc
+@using PagedList
+@model PagedList.IPagedList<haymuasi.Models.Product>
+@{
+    ViewBag.Title = "ManagerProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<style>
+    td {
+        text-align: center;
+    }
+
+    .col-md-1, .col-md-2, .col-md-3 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .from-check {
+        float: right;
+    }
+
+    td input {
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .success {
+        display: none;
+        font-size: 10px;
+        width: 50px;
+    }
+        .searchcode{
+        height:500px;
+        width:1000px;
+        overflow:scroll;
+    }
+    /*#suggesst{
+        overflow:auto;
+        height:300px;
+        position:absolute;
+        width:100px;
+        top:100px;
+        left:20px;
+    }*/
+</style>
+<h2>Quản lý sản phẩm</h2>
+<div class="row">
+    <div class="col-md-2"><input type="text" class="form-control" placeholder="Nhập MASP" id="searchcode" /></div>
+    <div class="col-md-1"><button type="button" class="btn btn-success" id="buttonsearch">Tìm Kiếm</button></div>
+    <div id="suggesst"></div>
+</div>
+@using (Html.BeginForm("DeleteProduct", "ManagerProduct", FormMethod.Post))
+{
+    <div id="overflow">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Mã sản phẩm</td>
+                    <td>Loại sản phẩm</td>
+                    <td>Tên Hình</td>
+                    <td>Tên Sản phẩm</td>
+                    <td>Kích thước</td>
+                    <td>Đơn Giá</td>
+                    <td><button class="delete-product btn btn-danger" id="delete" onclick="return confirm ('Are you sure')" type="submit">Xóa</button></td>
+                    <td><button type="button" class="btn btn-success" id="save">Save</button></td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td id="codeproduct_@item.productid">@item.masp</td>
+                        <td id="category_@item.productid">@item.categoryid</td>
+                        <td id="imgname_@item.productid"><span id="image" style="display:none;">@item.hinhanh</span><span id="image_@item.productid"><img src="~/Content/img/@item.hinhanh" style="width:80px;" /></span></td>
+                        <td id="productname_@item.productid">@item.chitiet</td>
+                        <td id="size_@item.productid">@item.size</td>
+                        <td id="price_@item.productid"><span id="price" style="display:none;">@item.giasp</span><span id="priceid">@item.giasp.ToString("N0")</span></td>
+                        <td><input type="checkbox" value="@item.productid" name="productid" /></td>
+                        <td>
+                            <button type="button" class="btn btn-warning" id="edit_@item.productid" name="@item.productid" onclick="editproduct(@item.productid)">sửa</button>
+                            <button type="button" class="btn btn-success success" id="success_@item.productid" onclick="success(@item.productid,($('#codeproduct_@item.productid input').val()),($('#category_@item.productid input').val()),($('#imgname_@item.productid').text()),($('#productname_@item.productid input').val()),($('#price_@item.productid input').val()),'@item.masp')">xong</button>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+}
+<button class="btn btn-success addproduct">Thêm sản phẩm</button>
+<div class="error"></div>
+<div class="show-hide" style="display:none;margin-top:10px;">
+    <div class="col-md-2">
+        <input class="form-control" id="codeproduct" placeholder="Mã SP  " />
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" id="categoryid" placeholder="Loại SP" />
+    </div>
+    <div class="col-md-1">
+        <input style="width:80px;" class="btn btn-primary" type="file" id="imgname" placeholder="Tên Hình" />
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" id="productname" placeholder="Tên SP" />
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" id="size" placeholder="Nhập Kích thước" />
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" type="number" id="priceadd" placeholder="Giá SP" />
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-success" id="addproduct">Thêm</button>
+    </div>
+</div>
+<div style="margin:5px auto;width:300px;">@Html.PagedListPager(Model, page => Url.Action("DisplayProduct", new { page = page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)</div>
+<script>
+    function editproduct(id) {
+        $("#edit_"+id).html("Xóa")
+        $("#success_"+id).show();
+        var codeproduct = $("<input>", { val: $("#codeproduct_"+id).text(), type: "text" });
+        $("#codeproduct_"+id).html(codeproduct)
+
+        var category = $("<input>", { val: $("#category_"+id).text(), type: "text"});
+        $("#category_" + id).html(category)
+
+        var size = $("<input>", { val: $("#size_"+id).text(), type: "text"});
+        $("#size_" + id).html(size)
+
+        var imgname = $("<input>", { type: "file" });
+        $("#image_"+id).html(imgname);
+        var productname = $("<input>", { val: $("#productname_"+id).text(), type: "text",id:"imgupload" });
+        $("#productname_"+id).html(productname);
+        var price = $("<input>", { val: $("#price_"+id+" #price").text(), numbersonly: "true",type:"number" });
+        $("#price_"+id+" #priceid").html(price);
+
+    }
+</script>

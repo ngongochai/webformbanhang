@@ -1,0 +1,10 @@
+﻿@model  haymuasi.Models.Product
+
+<select id="quantity">
+    @for (int a = 1; a < 50; a++)
+    {
+        <option value="@a">@a</option>
+    }
+</select>
+<button name="@Model.productid" type="button" onclick="addcart(@Model.productid, $(this).prev().val(),$('#postsize_@Model.productid').val())">Xac Nhan</button>
+

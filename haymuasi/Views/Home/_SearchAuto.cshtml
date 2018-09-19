@@ -1,0 +1,97 @@
+﻿@model IList<haymuasi.Models.Product>
+@foreach (var item in Model)
+{
+<li id="@item.productid" class="lisearch" style="position:relative;">
+    <a href="@Url.Action("detail", "product1", new { id=item.productid},null)">
+        <img width="60" src="/Content/img/@item.hinhanh" />
+    </a>
+    <div class="searchinfo">
+        <strong>kích thước:@item.size</strong>
+        <a href="@Url.Action("detail", "product1", new { id=item.productid},null)"><div class="titlesearch">@item.masp @item.chitiet</div></a>
+        <div class="pricesearch">@item.giasp.ToString("N0")</div>
+    </div>
+    <div class="view-more" style="float:right" onclick = "selectquantitysearch(@item.productid)"><img style="float:right" src="/Content/img/btn-addcart-small.png" /></div>
+    <div class="select-quantity-search" id="selectquantitysearch_@item.productid"></div>
+	<div id="showinput_@item.productid" style="display: none;">@if(@item.giasp==0){<input type="text" id="postsize_@item.productid" class="inputsize form-control" placeholder="Nhập Kích thước" style="top: 3px;right: 0px;">}</div>
+</li>
+
+}
+<style>
+    .showSearch .searchinfo {
+        float: right;
+        width: 70%;
+        line-height: 20px;
+        font-family: webfont;
+        font-size: 14px;
+    }
+
+    .showSearch li {
+        border-bottom: 1px solid #eee;
+        padding: 8px 0;
+        list-style-type:none;
+        float: left;
+    }
+
+    .showSearch .view-more {
+        display: block;
+        width: 100%;
+margin-top:-32px;
+        cursor: pointer;
+    }
+
+    .showSearch .param {
+        padding: 0px 3px 0 0;
+        background: rgb(241, 241, 241);
+        color: #fff;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: WebFontM;
+        border-radius: 2px;
+    }
+
+    .showSearch {
+        position: absolute;
+        z-index: 999999;
+        background-color: #FFF;
+        border: 3px solid #eee;
+        padding: 5px 10px;
+        width: 92%;
+        display: none;
+        max-height: 475px;
+        overflow-y: scroll;
+    }
+        .showSearch img {
+            vertical-align: middle;
+            width: 28%;
+            float: left;
+        }
+        .showSearch .titlesearch {
+            color: #4e4e4e;
+        }
+        .showSearch .pricesearch, .showSearch .pricesearch a {
+            color: #ff4200;
+        }
+            .select-quantity-search select{
+            width: 40px;
+            vertical-align:middle;
+    height: 25px;
+    border: 1px solid orange;
+    color: red;
+    font-family: webfont;
+    font-size: 15px;
+    }
+     .select-quantity-search button{
+         background: orange;
+    font-family: webfont;
+    height: 20px;
+
+    border: none;
+    width: 70px;
+     }
+.select-quantity-search{
+    position: absolute;
+    right: -12px;
+    right: 99px;
+    bottom: 13px;
+}
+</style>

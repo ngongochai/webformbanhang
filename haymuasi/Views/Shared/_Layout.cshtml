@@ -1,0 +1,230 @@
+﻿@using haymuasi.Models
+@{
+    var User = Session["User"] as User;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="shortcut icon" type="image/x-icon" href="~/Content/img/logo1.png" />
+    <title>drapchongtham</title>
+	<meta name="description" content="ga chống thấm cao cấp sài gòn , ga chống thấm cao cấp và đầy đủ kích thước cho người dùng đầy đủ kích thước giá rẽ , nhận đặt hàng sĩ và lẽ ">
+	<meta name="keywords" content="ga chong tham cao cap,ga chong tham cao cap sai gon,drap chong tham gia re,ga chong tham gia re,ga chong tham gia si,ga chong tham cho be,ga chong tham chat luong,ga chong tham chat luong cao,ga chong tham cao cap thanh pho ho chi minh,ga chong tham cotton cao cap,ga chong tham sai gon,ga chong tham dep,ga chong tham dep nhat,ga chong tham cotton cao cap,ga chong tham cho nem kim dan,ga chong tham day du kich thuoc,ga chong tham chat luong tot, ga chong tham nem, ga goi chong tham">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Scripts/cart.js"></script>
+    <script src="~/Scripts/numeral.min.js"></script>
+    <script src="~/Scripts/jquery.autocomplete.min.js"></script>
+    <script src="~/Scripts/jquery.nivo.slider.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/tab.js"></script>
+    <script src="~/Scripts/SearchAuto.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container cart" style="background: white;">
+            <div class="col-md-3 col-xs-12 col-sm-5  logo-hms">
+			<a href="/" title="drap chong tham">
+				<img alt="ga chong tham cao cap sai gon" title="drap chong tham cao cap sai gon" onclick="home()" style="margin-top: 30px;width:100%;" src="~/Content/img/LOGO.png" />
+				</a>
+				</div>
+            <div class="col-md-4 col-xs-12">
+                <div class="row box-seach-header">
+                    @using (Html.BeginForm("Search", "Search"))
+                    {
+                        <div class="col-md-8" style="padding:0;">
+                            <input name="values" class="form-control" placeholder="nhập tên sản phẩm" type="text" id="searchproduct" />
+                            <div style="display:none;position:absolute;top: 6px;right: 10px;" id="loading"><img src="~/Content/img/loading.gif" /></div>
+                        </div>
+                        <button type="submit" id="search-product-newpage" class="btn btn-primary">Tìm Kiếm</button>
+                    }
+                    <div class="col-md-10 col-xs-12 col-sm-5">
+                        @Html.Action("selectsize", "Home")
+                    </div>
+                    <div class="showSearch"></div>
+                </div>
+            </div>
+            <div class="col-md-3 phone-header">
+                <div class="col-md-12 col-xs-12">
+                    <img src="~/Content/img/icon-phone.png" />
+                    <span style="font-size:25px;vertical-align:middle;font-family:webfont;color:red;">0163.622.8289</span>
+					<a style="color: red;
+    font-size: 21px;" href="https://www.facebook.com/Ga-Ch%E1%BB%91ng-Th%E1%BA%A5m-Cao-C%E1%BA%A5p-S%C3%A0i-G%C3%B2n-1535673426731181/"><img src="~/Content/img/facebook-icon.png" style="width:40px;" />ga chống thấm</a>
+                </div>
+            </div>
+            <div class="col-md-2 giohang">
+                @if (User != null)
+                {
+                    @Html.ActionLink(@User.UserName,"LoginUser","LoginUser")
+                    @Html.ActionLink("Logout","LogoutUser","LoginUser")<br />
+                }
+                else{  
+                <a href="@Url.Action("LoginUser", "LoginUser")"><span>Đăng Nhập</span></a><a href="@Url.Action("Registry", "Registry", new { area="Admin"})"><span>Đăng Ký</span></a>}
+                <a href="@Url.Action("Cart","Cart")"><img style="position:relative" src="~/Content/img/icon-cart.png" /><span>@Html.Action("Countitem", "Home")</span></a>
+            </div>
+        </div>
+    </header>
+    <div class="custom-container">
+        @RenderBody()
+
+        <footer>
+            <div class="container cart">
+                <div class="row">
+                    <div class="introduce" style="text-align:justify;font-size:13px;">
+                        <span>
+							<strong><h4>Drap chống thấm cao cấp sài gòn</h4></strong> Gachongtham.org - Chăm Sóc Giấc Ngủ Của Bạn
+                        </span>
+						<span style="font-size: 18px;"> Ga chống thấm Cao Cấp Sài Gòn sẽ giúp bạn :
+🍀 bảo vệ nệm tối đa các thứ có thể thấm qua nệm làm bị giơ mà chúng ta không thể vệ sinh nệm
+🍀chất liệu cao cấp phù hợp với mọi lứa tuổi đặc biệt là trẻ nhỏ ,không hề nóng bí phù hợp với mọi thời tiết 
+🍀 hạn chế thời gian đóng bỉm của bé cho bé thoải mái bò trườn ...
+🍀 mẫu mã phong phú 
+🍀 sản phẩm tiến hành chọn lọc những mẫu vải tốt nhất và quy trình may của công nhân được kiểm duyệt kĩ càng
+🍀 nhận may theo kích thước yêu cầu của khách hàng
+🍀 nhận may theo kích thước yêu cầu của khách hàng 
+🍀 Các bạn xem hình, mình có chú thích 1 chút về sự khác nhau giữa Ga Chống Thấm cao cấp Sài Gòn so với các Ga trôi nổi nhé ( Giải thích câu hỏi của các Mom là vì saoGa Chống Thấm cao cấp Sài Gòn giá cao hơn ga bán ở chợ hay trên các nhóm mua chung..)
+📩 BẢNG GIÁ CHI TIẾT:<a href="https://www.facebook.com/1535673426731181/photos/a.1546147449017112.1073741832.1535673426731181/1546147435683780/?type=3">facebook</a>
+📩 CÁCH SỬ DỤNG :<a href="https://www.facebook.com/permalink.php?story_fbid=1546155539016303&id=1535673426731181">Facebook</a>
++CÁCH GIẶT GA :<a href="https://www.facebook.com/media/set/?set=a.168678316847428.1073741833.100011157825385&type=3">Facebook</a>
+
+🔈 Liên hệ: ♥01636 228 289 sms, zalo - 🍀viber </span>
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="title-pt">Sản phẩm theo chủ đề</div>
+                    <div class="product-topic">
+                        <ul>
+							<li>ga chống thấm cao cấp</li>
+							<li>ga chong tham cao cap sai gon</li>
+							<li>drap chong tham gia re</li>
+							<li>ga chong tham gia re</li>
+							<li>ga chong tham gia si</li>
+							<li>ga chong tham cho be</li>
+							<li>ga chong tham chat luong</li>
+							<li>ga chong tham chat luong cao</li>
+							<li>ga chong tham cao cap thanh pho ho chi minh</li>
+							<li>ga chong tham cotton cao cap</li>
+							<li>ga chong tham sai gon</li>
+							<li>ga chong tham dep</li>
+							<li>ga chong tham dep nhat</li>
+							<li>ga chong tham cotton cao cap</li>
+							<li>ga chong tham cotton gia re</li>
+							<li>ga chong tham cotton</li>
+							<li>drap chong tham tot nhat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row whyselection cart" style="padding-bottom:20px">
+                <div class="container">
+                    <div class="title-pt">Tại sao nên chọn Drap Chống thấm</div>
+                    <div class="col-md-4">
+                        <div class="col-md-3">
+                            <img src="~/Content/img/icon-choose1.png" />
+                        </div>
+                        <div class="col-md-8">
+                            <span class="header">Chi tiêu hiệu quả</span><br />
+                            <span class="detail">
+                                Đa dạng sản phẩm & dịch vụ<br />
+                                Chất lượng cao với giá ưu đãi
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-3">
+                            <img src="~/Content/img/icon-choose2.png" />
+                        </div>
+                        <div class="col-md-8">
+                            <span class="header">An tâm khi mua sắm</span><br />
+                            <span class="detail">
+                                Thanh toán tiền khi nhận hàng<br />
+                                Đổi trả thoải mái
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-3">
+                            <img src="~/Content/img/icon-choose3.png" />
+                        </div>
+                        <div class="col-md-8">
+                            <span class="header">Dịch vụ chu đáo</span><br />
+                            <span class="detail">
+                                Giao hàng trên toàn quốc<br />
+                                Hotline phục vụ 24/24
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-end cart">
+                <div class="container">
+                    <div class="col-md-4">
+                        <div class="title-footer">TRỢ GIÚP</div>
+                        <div class="detail-footer">
+                            <ul>
+                                <li><a href="#">Hỏi Đáp</a></li>
+                                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                                <li><a href="#">Thanh toán và vận chuyển</a></li>
+                                <li><a href="#">Chính sách mua sỉ</a></li>
+                                <li><a href="#">Chính sách đại lý và CTV</a></li>
+                                <li><a href="#">Chính sách bảo hành</a></li>
+                                <li><a href="#">Chính sách quy trình xử lý khiếu nại</a></li>
+                                <li><a href="#">Quy định đổi sản phẩm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="title-footer">HỢP TÁC</div>
+                                <ul>
+                                    <li><a href="#">Ga chống thấm cao cấp</a></li>
+                                    <li><a href="#">Chọn ga chống thấm</a></li>
+                                    <li><a href="#">Tuyển Dụng</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="title-footer">VỀ CHÚNG TÔI </div>
+                                <ul>
+                                    <li><a href="#">Liên Hệ Ga Chống thấm</a></li>
+                                    <li><a href="#">Chính Sách Ga chống thấm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <img src="~/Content/img/logo_bct.png" /></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="title-footer">THÔNG TIN LIÊN HỆ</div>
+                        <span style="color:white;">CÔNG TY TNHH SX & DV CAO SƠN<br />
+                                Địa chỉ:Đường Số 3,Phường Trường Thọ , Quận Thủ Đức TP.Hồ Chí Minh
+                                Điện thoại: 0163.622.8289 Hotline: 0163.622.8289
+                                Web: gachongtham.org- Email: caothisond@gmail.com
+                                MST: 0313846633
+                        </span><br />
+                        <a href="https://www.facebook.com/Ga-Ch%E1%BB%91ng-Th%E1%BA%A5m-Cao-C%E1%BA%A5p-S%C3%A0i-G%C3%B2n-1535673426731181/"><img src="~/Content/img/icon-face.png" /></a>
+                        <img src="~/Content/img/icon-google.png" />
+						<a href="https://www.facebook.com/uyen.hai.06122013" target="blank">Design by Ngoc-Hai</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/574fa76b43bd28b55c48e476/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

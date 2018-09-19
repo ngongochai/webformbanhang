@@ -1,0 +1,84 @@
+﻿@model IList<haymuasi.Models.Product>
+@{
+    ViewBag.Title = "ManagerProduct";
+    long total = 0;
+}
+<style>
+    td {
+        text-align: center;
+    }
+
+    .col-md-1, .col-md-2, .col-md-3 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .from-check {
+        float: right;
+    }
+
+    td input {
+        width: 100px;
+        border-radius: 5px;
+    }
+    .success {
+        display: none;
+        font-size: 10px;
+        width: 50px;
+    }
+
+    .searchcode {
+        height: 500px;
+        width: 1000px;
+        overflow: scroll;
+    }
+    .totalpay{
+            font-size: 20px;
+    text-align: right;
+    position: relative;
+    color:red;  
+    font-weight:bold;
+    left: 250px;
+    }
+    #exit{
+position: absolute;
+    right: 13px;
+    top: 4px;
+    font-size: 30px;
+    cursor:pointer;
+    color:red;
+    font-weight:bold;
+    }
+</style>
+<h2>Chi Tiết Đơn Hàng của <strong style="color:red;" id="customer"></strong></h2>
+<strong onclick="hidedetail()" id="exit">X</strong>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Mã sản phẩm</td>
+                    <td>Hình ảnh</td>
+                    <td>Tên Sản phẩm</td>
+                    <td>Kích thước</td>
+                    <td>Đơn Giá</td>
+                    <td>Số Lượng</td>
+                    <td>Thành Tiền</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.masp</td>
+                        <td><img src="~/Content/img/@item.hinhanh" style="width:80px;" /></td>
+                        <td>@item.chitiet</td>
+                        <td>@item.size</td>
+                        <td>@item.giasp.ToString("N0")</td>
+                        <td>@item.quantity</td>
+                        <td>@item.total.ToString("N0")</td>
+                    </tr>
+                    total += @item.total;
+                }
+            </tbody>
+        </table>
+<strong class="totalpay">Tổng Tiền : @total.ToString("N0") Vnđ</strong>
+    

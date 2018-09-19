@@ -1,0 +1,39 @@
+﻿@model IList<haymuasi.Models.MainMenu>
+@{
+    ViewBag.Title = "MainMenu";
+}
+<div class="custom-container-1">
+    <div class="navbar main-navbar">
+        <div class="container custom-container">
+            <div class="navbar-collapse collapse custom-collapse dropdown">
+                <ul class="nav navbar-nav nav-custome">
+                    <li class="home-menu-icon dropdown">
+                        <img src="~/Content/img/icon-home.png" />
+                    </li>
+                    @foreach (var i in Model)
+                    {
+                        if (@i.Parent_id == "0")
+                        {
+                            <li class="dropdown dropdown-custome">
+                                <img class="custom-img" src="~/Content/img/@i.hinh" /><a href="#" data-toggle="dropdown">@i.menucontent</a>
+
+                                    @if (@i.submenu != "") { 
+                                <ul>
+                                    @foreach (var j in Model)
+                                    {
+                                        if (@i.ID == @j.ID)
+                                        {
+                                            <li><span>@j.submenu</span></li>
+                                        }
+                                    }
+                                </ul>
+                                    }
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@using haymuasi.Models
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using PagedList.Mvc
+@using PagedList
+@model PagedList.IPagedList<haymuasi.Models.Search>
+<div class="container" >
+	@if (@ViewData["value"] == null)
+{
+    <h2 style="font-family:webfont;">có @ViewData["count"] sản phẩm </h2>
+}
+else if (Model.Count() == 0) { 
+<h2 style="font-family:webfont;">không có sản phẩm nào với từ khóa <span style="color:red;">"@ViewData["value"]"</span></h2>
+}
+else
+{
+    <h2 style="font-family:webfont;">có @ViewData["count"] sản phẩm với từ khóa <span style="color:red;">"@ViewData["value"]"</span></h2>
+}
+    <div class="row">
+        @foreach (var i in Model)
+        {
+			var url = "/ga-chong-tham/" + i.masp + "-" + i.productid;
+            <div class="col-md-4">
+                <div class="product-detail">
+                    <div class="hinhanhsp">
+                        <a href="@url">
+                            <img src="@Url.Content("~/Content/img/" + @i.hinhanh)" />
+                        </a>
+                        <span class="msp-hinhanh">MASP:@i.masp</span>
+                        <span class="size">Kích thước:@i.size</span>
+                    </div>
+                    <div class="tensp">
+                        <div class="ten-sanpham">
+                           	<span><a href="@url">@i.chitiet</a></span>
+                        </div>
+                        <div class="chitiet-sp">
+                            <div class="col-md-4 gia-sp ">
+                                <span>@i.giasp.ToString("N0")</span>
+                            </div>
+                            <div class="col-md-4 col-sm-8 col-xs-4 luotxem-sp">
+                                <span>@i.luotxem</span>
+                            </div>
+                            <div class="col-md-4 col-xs-3 muangay" onclick="selectquantity(@i.productid)">
+                                <div id="show-select" style="position:relative">
+                                    <img src="~/Content/img/btn-view-small.png" />
+                                </div>
+                            </div>
+                            <div class="select-quantity" id="selectquantity_@i.productid"></div>
+							<div id="showinput_@i.productid" style="display:none;">@if(@i.giasp==0){
+								<input type="text" id="postsize_@i.productid" class="inputsize form-control" placeholder="Nhập Kích thước">	
+								}								</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div style="margin:5px auto;width:300px;">@Html.PagedListPager(Model, page => Url.Action("Search", new { page = page, curentfiter = ViewBag.curentfiter }), PagedListRenderOptions.OnlyShowFivePagesAtATime)</div>
+</div>

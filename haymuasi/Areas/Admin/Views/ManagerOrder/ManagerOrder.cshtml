@@ -1,0 +1,96 @@
+﻿@using haymuasi.Models
+@using PagedList.Mvc
+@using PagedList
+@model PagedList.IPagedList<haymuasi.Models.Order>
+@{
+    ViewBag.Title = "ManagerOrder";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<style>
+    td {
+        text-align: center;
+    }
+
+    .col-md-1, .col-md-2, .col-md-3 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .from-check {
+        float: right;
+    }
+
+    td input {
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .success {
+        display: none;
+        font-size: 10px;
+        width: 50px;
+    }
+
+    .searchcode {
+        height: 500px;
+        width: 1000px;
+        overflow: scroll;
+    }
+    /*#suggesst{
+        overflow:auto;
+        height:300px;
+        position:absolute;
+        width:100px;
+        top:100px;
+        left:20px;
+    }*/
+    #showdetails{
+    display: block;
+    z-index: 10001;
+    outline: 0px;
+    position: absolute;
+    height: auto;
+    top: 0px;
+    border-radius:8px;
+    left: 0px;
+    background: #ffffff;
+    }
+</style>
+<h2>Quản lý Đơn Hàng</h2>
+@using (Html.BeginForm("DeleteProduct", "ManagerOrder", FormMethod.Post))
+{
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Tên Khách Hàng</td>
+                    <td>Điện Thoại</td>
+                    <td>Địa Chỉ</td>
+                    <td>Thành Phố</td>
+                    <td>Email</td>
+                    <td>Ghi Chú</td>
+                    <td><button class="delete-product btn btn-danger" id="delete" onclick="return confirm ('Are you sure')" type="submit">Xóa</button></td>
+                    <td><button type="button" class="btn btn-success" id="save">Save</button></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td id="namecustomer_@item.customerid">@item.namecustomer</td>
+                        <td>@item.phone</td>
+                        <td>@item.address</td>
+                        <td>@item.city</td>
+                        <td>@item.email</td>
+                        <td style="color:red;font-weight:bold;" id="notecustomer_@item.customerid">@item.note</td>
+                        <td><input type="checkbox" value="@item.customerid" name="customertid" /></td>
+                        <td><span style="color:red;font-size:13px;cursor:pointer" id="note_@item.customerid" onclick="whritenote(@item.customerid)">Ghi Chú / </span><span style="color:blue;font-size:14px;cursor:pointer" id="savenote_@item.customerid" onclick="savenote(@item.customerid)">Lưu</span><button type="button" id="detailorder_@item.customerid" onclick="showdetails(@item.customerid)" class="btn btn-success">Chi Tiết</button></td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+}
+<div style="margin:5px auto;width:300px;">@Html.PagedListPager(Model, page => Url.Action("DisplayProduct", new { page = page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)</div>
+<div id="showdetails"></div>
+
+

@@ -1,0 +1,14 @@
+﻿@model IList<haymuasi.Models.Product>
+@{
+    Layout = null;
+}
+@using (Html.BeginForm("Search", "Search"))
+{
+    <select class="form-control" name="values" onchange="this.form.submit()" style="margin-left: -15px;margin-top:10px;">
+        >
+        @foreach (var item in Model)
+        {
+            <option value="@item.size">@item.size</option>
+        }
+    </select>
+}

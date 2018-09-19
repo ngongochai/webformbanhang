@@ -1,0 +1,82 @@
+﻿@model List<haymuasi.Models.Product>
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    long total = 0;
+    int count = 0;
+}
+<link href="~/Content/cart.css" rel="stylesheet" type="text/css" />
+@Html.Action("MenuHeader", "Home")
+<div class="container">
+<table class="table cart">
+    <thead>
+        <tr>
+            <td class="title-cart">Mã sản phẩm</td>
+            <td class="title-cart">Tên sản phẩm</td>
+            <td class="title-cart">Kích thước</td>
+            <td class="title-cart">Hình ảnh</td>
+            <td class="title-cart">Đơn giá</td>
+            <td class="title-cart">Số Lượng</td>
+            <td class="title-cart">Thành tiền</td>   
+            <td class="title-cart"></td>     
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            total = total + item.total;
+        <tr id="item_@count">
+            <td class="style">@item.masp</td>
+            <td class="style">@item.chitiet</td>
+            <td class="style"><span id="sizeeidt_@count">@item.size</span>@if (item.giasp == 0)
+            {<span style="float:right;font-size:12px;color:red;cursor:pointer;" id="edit_@count" onclick="updatesize(@count,$('#sizeeidt_@count').text(),'@item.size',@item.productid)">Sửa kích thước</span> }</td>
+            <td class="style"><img src="~/Content/img/@item.hinhanh" style="width:100px;" /></td>
+            @if (item.giasp == 0)
+            {
+                <td class="style">0</td>
+            }
+            else
+            {
+                <td class="style">@string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0:#,###}", @item.giasp)</td>
+            }
+            <td class="style">
+                <select id="selectquantity_@item.productid" name="@item.productid" onchange="changequantity(@item.productid, $(this).val(),$('#sizeeidt_@count').text());">
+                    @for (int i = 1; i <= 50; i++)
+                    {
+                        if (@item.quantity == @i)
+                        {
+                            <option value="@i" selected>@i</option>
+                        }
+                        else
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    
+				}
+                </select>
+            </td>
+            <td class="style total1_@item.productid">@string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0:#,###}", @item.total)</td>
+            <td style="cursor:pointer" class="style" onclick="deleteitem(@item.productid,$('#selectquantity_@item.productid').val(),$('#sizeeidt_@count').text(),@count)">Xóa</td>
+        </tr>
+count++;
+	}
+    </tbody>
+</table>
+<div class="row cart">
+            <div class="col-xs-8"> </div>
+            <div class="col-xs-4"  style="color:red;font-size:20px;font-weight:bold;"><span>TỔNG TIỀN :</span><span  id="total2">
+   @string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0:#,###}", @total) VND</span>
+            </div>
+</div>
+</div>
+<div class="cart">
+	<div class="row">
+		<div class="col-md-6 col-xs-4"></div>
+		<div class="col-xs-2">
+			<button style="margin-right:30px;" id="buymore" class="btn btn-primary">Mua Thêm Sản Phẩm</button>
+		</div>
+		<div class="col-xs-4">
+			<button style="width: 140px;" class="btn btn-success" id="orders">Đặt Hàng</button>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,90 @@
+﻿@model haymuasi.Models.Product
+
+@{
+    ViewBag.Title = "chitietsanpham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Action("MenuHeader", "Home")
+<div class="container">
+    <div class="col-md-6" style="padding-left:0;">
+        <div class="slide">
+            <div class="product_image">
+                <img class="img-responsive" src="~/Content/img/@Model.hinhanh" style="width:488px;height:490px;" />
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="param">
+            <h1 style="font-family:webfont;color:blue" class="product-title">@Model.chitiet</h1>
+            <div style="font-family:webfont;color:red;font-size:25px;" class="pcodedetail">MÃ SP:@Model.masp</div>
+            <div class="share">
+
+
+            </div>
+            <div class="committed">
+                <div class="cm_tt">
+                    Với ứng dụng mang tính thiết thực, sản phẩm không chỉ phù hợp với mọi giađình mà còn phù hợp để:
+                </div>
+                <ul>
+                    <li>Bọc các sản phẩm nệm trong các bệnh viện, nhà hàng khách sạn, nhà khách</li>
+                    <li>Sản phẩm hữu dụng với các nhà trường có học sinh bán trú </li>
+                    <li>1m4x2mx10cm: 220k</li>
+                    <li>1m4x2mx20cm: 230k</li>
+                    <li>1m6x2mx10cm: 250k </li>
+                    <li>1m6x2mx20cm: 260k </li>
+                    <li>1m8x2mx10cm: 260k ...vv.. </li>
+                </ul>
+            </div>
+            <div class="price-sale">
+                <div class="sale"><span> Giá sỉ</span></div>
+                <div class="price">
+                    <span style="line-height:5px;">@Model.giasp.ToString("N0") VNĐ</span>
+                </div>
+                <div class="phone-cart" style="margin-bottom:20px;">
+                    <p style="margin:0;">Hỗ trợ đặt hàng</p>
+                    <strong style="color:#ff4200">0163.622.8289</strong>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="attribute-option input-style " id="anchorAttr">
+                <div class="row">
+                    <div class="attribute-sl">
+                        @if (Model.giasp == 0)
+                        {
+                            <div class="col-md-6">
+                                <input type="text" style="position:static;width:100% !important;" id="postsize_@Model.productid" class="inputsize form-control" placeholder="Nhập Kích thước" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-md-6">
+                                <span>Kích thước:</span><strong style="color:orange;font-family:webfont;font-size:18px;">@Model.size</strong>
+                            </div>
+                        }
+                        <select id="quantity" class="select-quantity" style="position:static">
+                            @for (int a = 1; a < 50; a++)
+                            {
+                                <option value="@a">@a</option>
+                            }
+                        </select>
+                        <img  src="~/Content/img/btn-buyer.png" onclick="addcart(@Model.productid, $(this).prev().val(),$('#postsize_@Model.productid').val());">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .select-quantity {
+    right: 16px;
+    bottom: 78px;
+    color: red;
+    height: 27px;
+    border: 2px solid;
+    width: 80px;
+}
+</style>
+
+

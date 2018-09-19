@@ -1,0 +1,18 @@
+﻿@using haymuasi.Models;
+@{
+    ViewBag.Title = "Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var User = Session["User"] as User;
+}
+@Html.Action("MenuHeader", "Home")
+@Html.Action("MainMenu", "MainMenu")
+<div class="container">
+    <h2>Information</h2>
+
+    @if (User != null)
+    {
+        @Html.ActionLink("Logout", "LogoutUser", "LoginUser")
+    }
+</div>

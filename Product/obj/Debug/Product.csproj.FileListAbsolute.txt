@@ -1,0 +1,21 @@
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\Product\bin\Debug\Product.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\Product\bin\Debug\Product.pdb
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\Product\obj\Debug\Product.dll
+C:\Users\NGOC HAI\Google Drive\HOC TAP\ASP.NET\haymuasi_v2\Product\obj\Debug\Product.pdb
+D:\ASP.NET\haymuasi_v2\Product\bin\Debug\Product.dll
+D:\ASP.NET\haymuasi_v2\Product\bin\Debug\Product.pdb
+D:\ASP.NET\haymuasi_v2\Product\obj\Debug\Product.dll
+D:\ASP.NET\haymuasi_v2\Product\obj\Debug\Product.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\Product\bin\Debug\Product.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\Product\bin\Debug\Product.pdb
+D:\ASP.NET\gachongtham\haymuasi_v2\Product\obj\Debug\Product.dll
+D:\ASP.NET\gachongtham\haymuasi_v2\Product\obj\Debug\Product.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\Product\bin\Debug\Product.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\Product\bin\Debug\Product.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\Product\obj\Debug\Product.dll
+D:\ASP.NET\gachongtham_2\haymuasi_v2\Product\obj\Debug\Product.pdb
+D:\ASP.NET\gachongtham_2\haymuasi_v2\Product\obj\Debug\Product.csprojResolveAssemblyReference.cache
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\Product\bin\Debug\Product.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\Product\bin\Debug\Product.pdb
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\Product\obj\Debug\Product.dll
+C:\Users\NGOC-HAI-IT\Google Drive\HOC TAP\ASP.NET\gachongtham\haymuasi_v2\Product\obj\Debug\Product.pdb

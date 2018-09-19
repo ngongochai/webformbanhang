@@ -1,0 +1,18 @@
+﻿@model IList<haymuasi.Models.Product>
+    @foreach (var item in Model)
+    {
+        <tr>
+            height:500px">
+            <td id="codeproduct_@item.productid">@item.masp</td>
+            <td id="category_@item.productid">@item.categoryid</td>
+            <td id="imgname_@item.productid"><span id="image" style="display:none;">@item.hinhanh</span><span id="image_@item.productid"><img src="~/Content/img/@item.hinhanh" style="width:80px;" /></span></td>
+            <td id="productname_@item.productid">@item.chitiet</td>
+			 <td id="size_@item.productid">@item.size</td>
+            <td id="price_@item.productid"><span style="display:none;" id="price">@item.giasp</span><span id="priceid">@item.giasp.ToString("N0")</span></td>
+            <td><input type="checkbox" value="@item.productid" name="productid" /></td>
+            <td>
+                <button type="button" class="btn btn-warning" id="edit_@item.productid" name="@item.productid" onclick="editproduct(@item.productid)">sửa</button>
+                <button type="button" class="btn btn-success success" id="success_@item.productid" onclick="success(@item.productid,($('#codeproduct_@item.productid input').val()),($('#category_@item.productid input').val()),($('#imgname_@item.productid #image').text()),($('#productname_@item.productid input').val()),($('#price_@item.productid input').val()),'@item.masp')">xong</button>
+            </td>
+        </tr>
+    }

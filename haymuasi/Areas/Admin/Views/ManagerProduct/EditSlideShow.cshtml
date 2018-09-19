@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "EditSlideShow";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>Thay đổi slide</h2>
+<div class="container">
+    <input type="file" id="slideshow" />
+    <button type="button" class="btn btn-success" onclick="updateslide(1)">Thay Slide 1</button>
+    <button type="button" class="btn btn-success" onclick="updateslide(2)">Thay Slide 2</button>
+    <button type="button" class="btn btn-success" onclick="updateslide(3)">Thay Slide 3</button>
+    <button type="button" class="btn btn-success" onclick="updateslide(4)" >Thay Slide 4</button>
+    <button type="button" class="btn btn-success" onclick="updateslide(5)">Thay Slide 5</button>
+</div>
+<script>
+    function updateslide(ac) {
+        var imgname;
+        var formData = new FormData();
+        var totalFiles = document.getElementById("slideshow").files.length;
+        for (var i = 0; i < totalFiles; i++) {
+            var file = document.getElementById("slideshow").files[i];
+            imgname = file.name;
+            formData.append("imgname", file);
+        }
+        if (totalFiles < 1) {
+            alert("vui lòng chọn tệt");
+        }
+        else {
+            $.ajax({
+                url: "/Admin/ManagerProduct/EditSlideShow",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function () {
+                }
+            })
+        }
+
+        $.ajax({
+            url: "/Admin/ManagerProduct/EditSlideShow",
+            type: "POST",
+            data: {"ac":ac,"imgname":imgname},
+            success: function (result) {
+                if (result == 1)
+                    alert("thay đổi thành công")
+                else
+                    alert("không thành công");
+            }
+        });
+    }
+</script>
+
